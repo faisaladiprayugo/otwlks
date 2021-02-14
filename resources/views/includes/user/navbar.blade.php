@@ -7,20 +7,21 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav navbar-font-style mr-auto ml-auto">
-      <li class="nav-item {{ (request()->is('/')) ? 'navbar-active' : '' }}">
+    <!-- {{ (request()->is('/')) ? 'navbar-active' : '' }} -->
+      <li class="nav-item">
         <a class="nav-link color-dark-blue" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item {{ (request()->is('pages')) ? 'navbar-active' : '' }}">
-        <a class="nav-link color-dark-blue" href="/pages">Pages</a>
+      <li class="nav-item">
+        <a class="nav-link color-dark-blue" href="#headmaster">Headmaster</a>
       </li>
-      <li class="nav-item {{ (request()->is('academics')) ? 'navbar-active' : '' }}">
-        <a class="nav-link color-dark-blue" href="/academics">Academics</a>
+      <li class="nav-item">
+        <a class="nav-link color-dark-blue" href="#about">About</a>
       </li>
-      <li class="nav-item {{ (request()->is('admission')) ? 'navbar-active' : '' }}">
-        <a class="nav-link color-dark-blue" href="/admission">Admission</a>
+      <li class="nav-item">
+        <a class="nav-link color-dark-blue" href="#news">News</a>
       </li>
-      <li class="nav-item {{ (request()->is('courses')) ? 'navbar-active' : '' }}">
-        <a class="nav-link color-dark-blue" href="/courses">Courses</a>
+      <li class="nav-item">
+        <a class="nav-link color-dark-blue" href="/#events">Events</a>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

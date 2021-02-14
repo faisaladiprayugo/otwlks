@@ -37,12 +37,12 @@
     color: #3DB166;
 }
 
-.pelanggan-title{
+.customer-title{
     font-weight: bold;
     font-size: 20px;
 }
 
-.pelanggan-subtitle{
+.customer-subtitle{
     font-size: 15px;
     color: rgb(185, 185, 185);
 }
@@ -108,7 +108,7 @@
     text-align: center;
 }
 
-.pelanggan{
+.customer{
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -137,6 +137,10 @@
     margin-top: 20px!important;
 }
 
+.mt-50{
+    margin-top: 50px!important;
+}
+
 .mt-10{
     margin-top: 10px!important;
 }
@@ -147,6 +151,18 @@
 
 .mb-20{
     margin-bottom: 20px!important;
+}
+
+.mb-50{
+    margin-bottom: 50px!important;
+}
+
+.pt-50{
+    padding-top: 50px;
+}
+
+.pb-50{
+    padding-bottom: 50px;
 }
 
 .btn-about{
@@ -230,4 +246,26 @@
     background: #1b2945;
     color: white;
     font-size: 15px;
+}
+
+.btn-login{
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.container-login{
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 0px 50px;
+    color: white;
+    margin-top: 20vh!important;
+}
+
+.btn-in-table{
+    margin: 0px 5px;
 }

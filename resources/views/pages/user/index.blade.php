@@ -15,7 +15,7 @@
           <div class="ff-poppins">
             <p class="subtitle-home">The Best University Of The State</p>
             <p class="title-home">Kingster University</p>
-            <button class="btn btn-title-home">Hire me</button>
+            <button class="btn btn-title-home">Lets Get Started</button>
           </div>
         </div>
       </div>
@@ -33,33 +33,33 @@
 
 
 <!-- //////////////////////////////
-// PELANGGAN
+// Customer
 ///////////////////////////// -->
 
-<div id="pelanggan" class="container pelanggan">
+<!-- <div id="customer" class="container customer">
   <div class="row text-center">
     <div class="col-md-3">
       <span class="fa fa-school"></span>
-      <p class="pelanggan-title">University Life</p>
-      <p class="pelanggan-subtitle">Overall in here</p>
+      <p class="customer-title">University Life</p>
+      <p class="customer-subtitle">Overall in here</p>
     </div>
     <div class="col-md-3">
       <span class="fa fa-school"></span>
-      <p class="pelanggan-title">University Life</p>
-      <p class="pelanggan-subtitle">Overall in here</p>
+      <p class="customer-title">University Life</p>
+      <p class="customer-subtitle">Overall in here</p>
     </div>
     <div class="col-md-3">
       <span class="fa fa-school"></span>
-      <p class="pelanggan-title">University Life</p>
-      <p class="pelanggan-subtitle">Overall in here</p>
+      <p class="customer-title">University Life</p>
+      <p class="customer-subtitle">Overall in here</p>
     </div>
     <div class="col-md-3">
       <span class="fa fa-school"></span>
-      <p class="pelanggan-title">University Life</p>
-      <p class="pelanggan-subtitle">Overall in here</p>
+      <p class="customer-title">University Life</p>
+      <p class="customer-subtitle">Overall in here</p>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -68,19 +68,19 @@
 
 
 <!-- ////////////////////////////
-// ABOUT
+// Head Master
 /////////////////////////// -->
 
-<div id="about" class="container about">
+<div id="headmaster" class="container about pb-50 pt-50">
   <div class="row">
     <div class="col-md-6">
-      <img src="/assets/img/user/about-bg-1.jpg" class="w-100">
+      <img src="/uploads/headmaster/{{$headmaster->foto}}" class="w-100">
     </div>
     <div class="col-md-6 mt-2">
-      <h1 style="font-weight: bold;">Apply for Admission</h1>
-      <h4 class="color-green">Fall 2019 applications are now open</h4>
-      <p class="mt-20">We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
-      <button class="btn btn-about">Apply Now</button>
+      <h1 style="font-weight: bold;">{{$headmaster->judul}}</h1>
+      <h4 class="color-green">{{$headmaster->sub_judul}}</h4>
+      <p class="mt-20">{{$headmaster->deskripsi}}</p>
+      <button class="btn btn-about" href="#!">Apply Now</button>
     </div>
   </div>
 </div>
@@ -97,11 +97,13 @@
 <div id="about-2" class="about-2">
   <div class="row m-20 p-20">
     <div class="col-md-4">
-      <h2 class="color-green" style="font-weight: bold;">About Our University</h2>
+      <h2 class="color-green" style="font-weight: bold;">{{$about->judul}}</h2>
+      <h5 class="white" style="font-weight: bold;">{{$about->sub_judul}}</h5>
     </div>
     <div class="col-md-8">
-      <p style="font-size: 20px;">We are one of the largest, most diverse universities in the USA with over 90,000 students in USA, and a further 30,000 studying across 180 countries for Kingster University.</p>
-      <p class="mt-20" style="font-size: 20px;">Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
+      @foreach($d_about as $da)
+      <p style="font-size: 20px;" class="mb-20">{{$da->deskripsi}}</p>
+      @endforeach
       <button class="btn btn-about">Apply Now</button>
     </div>
   </div>
@@ -123,39 +125,23 @@
   </div>
   <div class="row mt-20">
     <div class="col-md-6">
-      <img src="/assets/img/user/about-bg-1.jpg" class="w-100">
-      <p class="news-date mt-20">JUNE 6, 2016<a> / </a>ADMISSION, STUDENT</p>
-      <p class="title-news">Professor Albert joint research on mobile money in Tanzania</p>
-      <button class="btn btn-about mt-20 mb-20">Apply Now</button>
+      <img src="/uploads/news/{{$news[0]->foto}}" class="w-100">
+      <p class="news-date mt-20">{{$news[0]->tanggal}}<a> / </a>{{$news[0]->kategori}}</p>
+      <p class="title-news">{{$news[0]->judul}}</p>
+      <button class="btn btn-about mt-20 mb-20" href="#!">Apply Now</button>
     </div>
     <div class="col-md-6">
+      @for($i = 1; $i < count($news); $i++)
       <div class="row mb-20">
         <div class="col-4">
-          <img src="/assets/img/user/about-bg-1.jpg" class="w-100">
+          <img src="/uploads/news/{{$news[$i]->foto}}" class="w-100">
         </div>
         <div class="col">
-          <p class="news-date2">JUNE 6, 2016<a> / </a>ADMISSION, STUDENT</p>
-          <p class="title-news2">Professor Albert joint research on mobile money in Tanzania</p>
+          <p class="news-date2">{{$news[$i]->tanggal}}<a> / </a>{{$news[$i]->kategori}}</p>
+          <p class="title-news2">{{$news[$i]->judul}}</p>
         </div>
       </div>
-      <div class="row mb-20">
-        <div class="col-4">
-          <img src="/assets/img/user/about-bg-1.jpg" class="w-100">
-        </div>
-        <div class="col">
-          <p class="news-date2">JUNE 6, 2016<a> / </a>ADMISSION, STUDENT</p>
-          <p class="title-news2">Professor Albert joint research on mobile money in Tanzania</p>
-        </div>
-      </div>
-      <div class="row mb-20">
-        <div class="col-4">
-          <img src="/assets/img/user/about-bg-1.jpg" class="w-100">
-        </div>
-        <div class="col">
-          <p class="news-date2">JUNE 6, 2016<a> / </a>ADMISSION, STUDENT</p>
-          <p class="title-news2">Professor Albert joint research on mobile money in Tanzania</p>
-        </div>
-      </div>
+      @endfor
       </div>
     </div>
   </div>
@@ -178,60 +164,25 @@
       <p>See all upcoming events now!</p>
     </div>
     <div class="col-md-4">
+      @foreach($events as $key => $e)
       <div class="row mb-20">
         <div class="col-3 text-center">
-          <p class="date-event">17</p>
-          <p class="month-event">DEC</p>
+          <p class="date-event">{{$day[$key]}}</p>
+          <p class="month-event">{{$month[$key]}}</p>
         </div>
         <div class="col">
-          <p class="bold mt-10">Fintech & Key Investment Conference</p>
+          <p class="bold mt-10">{{$e->judul}}</p>
           <p class="color-green">
-            <span class="fa fa-clock">1:00 pm - 1:00 pm</span>
-            <span class="fa fa-clock">Kingster Grand Hall</span>
+            <span class="fa fa-clock">{{$e->jam}}</span>
+            <span class="fa fa-clock">{{$e->tempat}}</span>
           </p>
         </div>
       </div>
-      <div class="row mb-20">
-        <div class="col-3 text-center">
-          <p class="date-event">17</p>
-          <p class="month-event">DEC</p>
-        </div>
-        <div class="col">
-          <p class="bold mt-10">Fintech & Key Investment Conference</p>
-          <p class="color-green">
-            <span class="fa fa-clock">1:00 pm - 1:00 pm</span>
-            <span class="fa fa-clock">Kingster Grand Hall</span>
-          </p>
-        </div>
+      @if($key == 1)
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="row mb-20">
-        <div class="col-3 text-center">
-          <p class="date-event">17</p>
-          <p class="month-event">DEC</p>
-        </div>
-        <div class="col">
-          <p class="bold mt-10">Fintech & Key Investment Conference</p>
-          <p class="color-green">
-            <span class="fa fa-clock">1:00 pm - 1:00 pm</span>
-            <span class="fa fa-clock">Kingster Grand Hall</span>
-          </p>
-        </div>
-      </div>
-      <div class="row mb-20">
-        <div class="col-3 text-center">
-          <p class="date-event">17</p>
-          <p class="month-event">DEC</p>
-        </div>
-        <div class="col">
-          <p class="bold mt-10">Fintech & Key Investment Conference</p>
-          <p class="color-green">
-            <span class="fa fa-clock">1:00 pm - 1:00 pm</span>
-            <span class="fa fa-clock">Kingster Grand Hall</span>
-          </p>
-        </div>
-      </div>
+      <div class="col-md-4">
+      @endif
+      @endforeach
     </div>
   </div>
 </div>
